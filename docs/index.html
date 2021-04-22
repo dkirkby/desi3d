@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESI3D</title>
+</head>
+<body>
+    <div id="observablehq-universe-d38575ce"></div>
+    <div id="observablehq-viewof-cameraZ-d38575ce"></div>
+    <div id="observablehq-viewof-showTypes-d38575ce"></div>
+    <div id="observablehq-viewof-Om0-d38575ce"></div>
+    <div id="observablehq-viewof-Ode0-d38575ce"></div>
+    <div id="observablehq-setbenchmark-d38575ce"></div>
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import define from "https://api.observablehq.com/@dkirkby/desi3d.js?v=3";
+    new Runtime().module(define, name => {
+    if (name === "universe") return new Inspector(document.querySelector("#observablehq-universe-d38575ce"));
+    if (name === "viewof cameraZ") return new Inspector(document.querySelector("#observablehq-viewof-cameraZ-d38575ce"));
+    if (name === "viewof showTypes") return new Inspector(document.querySelector("#observablehq-viewof-showTypes-d38575ce"));
+    if (name === "viewof Om0") return new Inspector(document.querySelector("#observablehq-viewof-Om0-d38575ce"));
+    if (name === "viewof Ode0") return new Inspector(document.querySelector("#observablehq-viewof-Ode0-d38575ce"));
+    if (name === "setbenchmark") return new Inspector(document.querySelector("#observablehq-setbenchmark-d38575ce"));
+    return ["animated","dynamic"].includes(name);
+    });
+</script>
+</body>
+</html>
