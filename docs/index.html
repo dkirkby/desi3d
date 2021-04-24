@@ -10,25 +10,29 @@
 </head>
 <body>
     <div id="universe"></div>
+    <div id="showTypes"></div>
+    <div id="observerText"></div>
     <div>
-        <div id="cameraZ" class="inline"></div>
-        <div id="showTypes" class="inline boxed"></div>
+        <div id="cameraRedshift" class="inline"></div>
+        <div id="reset" class="inline"></div>
     </div>
+    <div id="modelText"></div>
     <div>
         <div id="Om0" class="inline boxed"></div>
         <div id="Ode0" class="inline boxed"></div>
-        <div id="setbenchmark" class="inline"></div>
     </div>
     <script type="module">
         import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
         import define from "https://api.observablehq.com/@dkirkby/desi3d.js?v=3";
         new Runtime().module(define, name => {
-            if (name === "universe") return new Inspector(document.querySelector("#universe"));
-            if (name === "viewof cameraZ") return new Inspector(document.querySelector("#cameraZ"));
-            if (name === "viewof showTypes") return new Inspector(document.querySelector("#showTypes"));
-            if (name === "viewof Om0") return new Inspector(document.querySelector("#Om0"));
-            if (name === "viewof Ode0") return new Inspector(document.querySelector("#Ode0"));
-            if (name === "setbenchmark") return new Inspector(document.querySelector("#setbenchmark"));
+            if(name === "universe") return new Inspector(document.querySelector("#universe"));
+            if(name === "viewof cameraRedshift") return new Inspector(document.querySelector("#cameraRedshift"));
+            if(name === "observerText") return new Inspector(document.querySelector("#observerText"));
+            if(name === "modelText") return new Inspector(document.querySelector("#modelText"));
+            if(name === "viewof showTypes") return new Inspector(document.querySelector("#showTypes"));
+            if(name === "viewof Om0") return new Inspector(document.querySelector("#Om0"));
+            if(name === "viewof Ode0") return new Inspector(document.querySelector("#Ode0"));
+            if(name === "reset") return new Inspector(document.querySelector("#reset"));
             return ["animated","dynamic"].includes(name);
         });
     </script>
