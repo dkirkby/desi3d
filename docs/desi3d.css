@@ -5,3 +5,8 @@
     padding-left: 4px;
     border: 1px solid #777;
 }
+#splash {
+    width: 800px;
+    height: 800px;
+    background: url(img/rosette15-unwise-neo6.jpg) center center / cover no-repeat;
+}
