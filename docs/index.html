@@ -25,7 +25,7 @@
     </div>
     <script type="module">
         import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-        import define from "desi3d.js?v=3";
+        import define from "https://api.observablehq.com/@dkirkby/desi3d.js?v=3";
         new Runtime().module(define, name => {
             if(name === "universe") return new Inspector(document.querySelector("#universe"));
             if(name === "viewof cameraRedshift") return new Inspector(document.querySelector("#cameraRedshift"));
