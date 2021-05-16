@@ -1,10 +1,10 @@
 // https://observablehq.com/@dkirkby/desi3d@1309
-import define1 from "/@mbostock/scrubber.js?v=3";
-import define2 from "/@observablehq/inputs.js?v=3";
-import define3 from "/@dkirkby/cosmocalc.js?v=3";
-import define4 from "/@dkirkby/jumpy.js?v=3";
-import define5 from "/@dkirkby/random.js?v=3";
-import define6 from "/@dkirkby/array-utilities.js?v=3";
+import define1 from "https://observablehq.com/@mbostock/scrubber.js?v=3";
+import define2 from "https://observablehq.com/@observablehq/inputs.js?v=3";
+import define3 from "https://observablehq.com/@dkirkby/cosmocalc.js?v=3";
+import define4 from "https://observablehq.com/@dkirkby/jumpy.js?v=3";
+import define5 from "https://observablehq.com/@dkirkby/random.js?v=3";
+import define6 from "https://observablehq.com/@dkirkby/array-utilities.js?v=3";
 
 export default function define(runtime, observer) {
   const main = runtime.module();
@@ -18,7 +18,7 @@ md`# DESI in 3D`
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.domElement.style["background"] = `url(${bgImageURL}) no-repeat center center`;
   renderer.domElement.style["background-size"] = "cover";
-  
+
   const PI = Math.PI;
   const deg2rad = deg => PI*deg/180;
 
@@ -447,7 +447,7 @@ async function png2blob(src, {channels = 3} = {}) {
   const {naturalWidth: width, naturalHeight: height} = img;
   const ctx = DOM.element('canvas', {width, height}).getContext('2d');
   ctx.drawImage(img, 0, 0);
-  return decode(ctx.getImageData(0, 0, width, height), {channels});  
+  return decode(ctx.getImageData(0, 0, width, height), {channels});
 }
 )});
   main.variable(observer("decode")).define("decode", ["EOF"], function(EOF){return(
