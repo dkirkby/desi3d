@@ -1,3 +1,7 @@
+body {
+    background-color: #aaa;
+}
+
 .inline {
     display: inline-block;
 }
