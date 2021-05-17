@@ -14,3 +14,7 @@ body {
     height: 800px;
     background: url(img/rosette15-unwise-neo6.jpg) center center / cover no-repeat;
 }
+.note {
+    color: #555;
+    font-style: italic;
+}

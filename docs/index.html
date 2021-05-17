@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="desi3d.css">
 </head>
 <body>
+    <div class="note">Scroll down for a description and interactive controls</div>
     <div id="universe">
         <div id="splash"></div>
     </div>
     <div>
-        <p></p>This interactive 3D visualization shows 30 thousand galaxies observed by the <a href="https://www.desi.lbl.gov/">Dark Energy
+        <p>This interactive 3D visualization shows about 30,000 galaxies observed by the <a href="https://www.desi.lbl.gov/">Dark Energy
         Spectroscopic Instrument</a> (DESI) in about 5 hours. DESI targets four types of galaxies that you can toggle
         on/off below:
         <ul>
@@ -57,6 +58,10 @@
     <div>
         <div id="Om0" class="inline boxed"></div>
         <div id="Ode0" class="inline boxed"></div>
+    </div>
+    <div>
+        <p class="note">This visualization was developed by <a href="https://faculty.sites.uci.edu/dkirkby/">David Kirkby</a> using
+            proprietary <a href="https://www.desi.lbl.gov/">DESI</a> data.<p>
     </div>
     <script type="module">
         import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
